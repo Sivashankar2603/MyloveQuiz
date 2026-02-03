@@ -1,0 +1,34 @@
+02.03 4:55 PM
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saranya ❤️ Sivashankar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1 class="glow">Saranya  Sivashankar</h1>
+  <p class="subtitle">Just a small quiz… but full of love </p>
+
+  <!-- Music -->
+  <audio id="bgMusic" src="song.mp3"></audio>
+  <button class="music-btn" onclick="playMusic()"> Tap to Play Song</button>
+
+  <!-- Quiz -->
+  <div id="quiz-box">
+    <h2 id="question"></h2>
+    <div class="options">
+      <button onclick="checkAnswer(0)" id="opt0"></button>
+      <button onclick="checkAnswer(1)" id="opt1"></button>
+      <button onclick="checkAnswer(2)" id="opt2"></button>
+      <button onclick="checkAnswer(3)" id="opt3"></button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
