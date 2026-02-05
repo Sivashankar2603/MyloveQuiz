@@ -80,7 +80,14 @@ function checkAnswer(selected) {
 }
 
 function playMusic() {
-  document.getElementById("bgMusic").play();
+  const music = document.getElementById("bgMusic");
+  music.volume = 0.6;
+
+  music.play().catch(error => {
+    alert("Song play aagala 😅 Please tap again 🎵");
+    console.log(error);
+  });
+}
 }
 
 loadQuestion();
