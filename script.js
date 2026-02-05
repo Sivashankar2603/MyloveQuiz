@@ -1,46 +1,50 @@
-let quiz = [
+const quiz = [
   {
-    question: "Saranya-ku Sivashankar romba pidikkuma? 😍",
-    options: ["Ama ❤️", "Rompa Ama 😘", "Always 💕", "Ellamey ❤️"]
+    q: "Saranya-ku Sivashankar romba pidikkuma? 😍",
+    o: ["Ama ❤️", "Rompa Ama 😘", "Always 💕", "Ellamey ❤️"]
   },
   {
-    question: "Namma love eppovum epdi irukanum?",
-    options: ["Sweet 🍫", "Strong 💪", "Fun 😄", "Forever ♾️"]
+    q: "Namma love epdi irukanum?",
+    o: ["Cute 😍", "Strong 💪", "Fun 😄", "Forever ♾️"]
   },
   {
-    question: "Saranya smile-na Sivashankar-ku?",
-    options: ["Cute 😍", "Heart melt 🫠", "Addiction 😌", "Ellamey ❤️"]
+    q: "Saranya smile-na Sivashankar-ku?",
+    o: ["Addiction 😌", "Heart melt 🫠", "Peace 🤍", "Ellamey ❤️"]
   },
   {
-    question: "Sivashankar heart full-aa yaar?",
-    options: ["Friends", "Family", "Saranya ❤️", "World"]
+    q: "Sivashankar heart full-aa yaar?",
+    o: ["Friends", "Family", "Saranya ❤️", "World"]
   },
   {
-    question: "Last question 😌 Sivashankar solradhu?",
-    options: ["I like you", "I care you", "I need you", "I LOVE YOU SARANYA ❤️"]
+    q: "Last one 😌 Sivashankar solradhu?",
+    o: [
+      "I like you",
+      "I care for you",
+      "I need you",
+      "I LOVE YOU SARANYA ❤️"
+    ]
   }
 ];
 
-let current = 0;
+let i = 0;
 
 function loadQuestion() {
-  document.getElementById("question").innerText =
-    quiz[current].question;
+  document.getElementById("question").innerText = quiz[i].q;
 
-  for (let i = 0; i < 4; i++) {
-    document.getElementById("opt" + i).innerText =
-      quiz[current].options[i];
-  }
+  document.getElementById("opt0").innerText = quiz[i].o[0];
+  document.getElementById("opt1").innerText = quiz[i].o[1];
+  document.getElementById("opt2").innerText = quiz[i].o[2];
+  document.getElementById("opt3").innerText = quiz[i].o[3];
 }
 
 function nextQuestion() {
-  current++;
-  if (current < quiz.length) {
+  i++;
+  if (i < quiz.length) {
     loadQuestion();
   } else {
     document.getElementById("quiz-box").innerHTML = `
-      <h2>💖 I LOVE YOU SARANYA 💖</h2>
-      <p>Forever yours,<br><b>Sivashankar</b> 😘</p>
+      <h1 style="color:#ff4d6d;">💖 I LOVE YOU SARANYA 💖</h1>
+      <p style="font-size:18px;">Forever yours,<br><b>Sivashankar</b> 😘</p>
     `;
   }
 }
