@@ -1,35 +1,31 @@
 let quiz = [
   {
     question: "Saranya-ku Sivashankar romba pidikkuma? 😍",
-    options: ["Ama ❤️", "Rompa Ama 😘", "Always 💕", "Ellamey ❤️"],
-    answer: 3
+    options: ["Ama ❤️", "Rompa Ama 😘", "Always 💕", "Ellamey ❤️"]
   },
   {
-    question: "Namma love eppovum?",
-    options: ["1 day", "1 month", "Life long 💍", "Forever ♾️"],
-    answer: 3
+    question: "Namma love eppovum epdi irukanum?",
+    options: ["Sweet 🍫", "Strong 💪", "Fun 😄", "Forever ♾️"]
   },
   {
-    question: "Saranya smile-na?",
-    options: ["Cute", "Heart melt", "Dangerous 😜", "Ellamey"],
-    answer: 3
+    question: "Saranya smile-na Sivashankar-ku?",
+    options: ["Cute 😍", "Heart melt 🫠", "Addiction 😌", "Ellamey ❤️"]
   },
   {
-    question: "Sivashankar heart yaar kitta?",
-    options: ["Friends", "Family", "Saranya ❤️", "World"],
-    answer: 2
+    question: "Sivashankar heart full-aa yaar?",
+    options: ["Friends", "Family", "Saranya ❤️", "World"]
   },
   {
-    question: "Last question 😌",
-    options: ["I like you", "I care you", "I need you", "I LOVE YOU ❤️"],
-    answer: 3
+    question: "Last question 😌 Sivashankar solradhu?",
+    options: ["I like you", "I care you", "I need you", "I LOVE YOU SARANYA ❤️"]
   }
 ];
 
 let current = 0;
 
 function loadQuestion() {
-  document.getElementById("question").innerText = quiz[current].question;
+  document.getElementById("question").innerText =
+    quiz[current].question;
 
   for (let i = 0; i < 4; i++) {
     document.getElementById("opt" + i).innerText =
@@ -37,21 +33,20 @@ function loadQuestion() {
   }
 }
 
-function checkAnswer() {
+function nextQuestion() {
   current++;
   if (current < quiz.length) {
     loadQuestion();
   } else {
-    document.getElementById("quiz-box").innerHTML =
-      "<h2>I LOVE YOU SARANYA ❤️</h2><p>Forever – Sivashankar</p>";
+    document.getElementById("quiz-box").innerHTML = `
+      <h2>💖 I LOVE YOU SARANYA 💖</h2>
+      <p>Forever yours,<br><b>Sivashankar</b> 😘</p>
+    `;
   }
 }
 
 function playMusic() {
-  let music = document.getElementById("bgMusic");
-  music.play().catch(() => {
-    alert("Tap again 🎵");
-  });
+  document.getElementById("bgMusic").play();
 }
 
-window.onload = loadQuestion; 
+window.onload = loadQuestion;
