@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Saranya ❤️ Sivashankar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="options">
-  <button class="option-btn" id="opt0" onclick="nextQuestion()">Ama ❤️</button>
-  <button class="option-btn" id="opt1" onclick="nextQuestion()">Rompa Ama 😘</button>
-  <button class="option-btn" id="opt2" onclick="nextQuestion()">Always 💕</button>
-  <button class="option-btn" id="opt3" onclick="nextQuestion()">Ellamey ❤️</button>
-</div>
+  <audio id="bgMusic" src="song.mp3"></audio>
 
-<audio id="bgMusic" src="song.mp3"></audio>
+  <div class="container" id="quiz-box">
 
-<!-- IMPORTANT: script LAST -->
-<script src="script.js"></script>
+    <h1 class="title">Saranya ❤️ Sivashankar</h1>
+
+    <button class="music-btn" onclick="playMusic()">🎵 Tap to Play Song</button>
+
+    <div class="question-box">
+      <h2 id="question">Loading...</h2>
+    </div>
+
+    <div class="options">
+      <button class="option-btn" id="opt0" onclick="nextQuestion()"></button>
+      <button class="option-btn" id="opt1" onclick="nextQuestion()"></button>
+      <button class="option-btn" id="opt2" onclick="nextQuestion()"></button>
+      <button class="option-btn" id="opt3" onclick="nextQuestion()"></button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
