@@ -1,68 +1,96 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 body {
   margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  background: #fff0f5;
-}
-
-.container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background: #fff;
+  overflow: hidden;
   text-align: center;
-  padding: 20px;
-}
-
-.title {
-  color: #ff4d6d;
-  font-size: 28px;
-  margin-bottom: 20px;
-  text-shadow: 0 0 10px #ffb3c6;
-}
-
-.music-btn {
-  background: #ff4d6d;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 25px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-bottom: 30px;
-}
-
-.question-box {
-  margin-bottom: 20px;
-}
-
-#question {
-  font-size: 20px;
   color: #333;
 }
 
-.options {
-  width: 100%;
-  max-width: 300px;
-  display: flex;
+.page {
+  display: none;
+  height: 100vh;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  gap: 12px;
 }
 
-.option-btn {
-  padding: 14px;
-  font-size: 16px;
-  border-radius: 15px;
-  border: 2px solid #ff4d6d;
-  background: white;
+.page.active {
+  display: flex;
+}
+
+h1 {
   color: #ff4d6d;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+  text-shadow: 0 0 15px #ffb3c1;
 }
 
-.option-btn:active {
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ff4d6d;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.tease {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+button {
   background: #ff4d6d;
   color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff1f4b;
+}
+
+.hidden {
+  display: none;
+}
+
+/* QUIZ */
+#question {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#options button {
+  width: 100%;
+  max-width: 320px;
+  margin: 8px auto;
+  background: #ffe5ec;
+  color: #333;
+}
+
+#options button:hover {
+  background: #ffb3c1;
+}
+
+/* HEART RAIN */
+.hearts span {
+  position: absolute;
+  top: -10px;
+  font-size: 20px;
+  animation: fall 6s linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
 }
