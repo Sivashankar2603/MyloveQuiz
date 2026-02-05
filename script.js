@@ -1,57 +1,57 @@
-const quiz = [
+let quiz = [
   {
-    question: "1️⃣ Namma first time pesinadhu enga?",
-    options: ["Instagram", "WhatsApp", "Face to face", "Friend introduce"],
-    answer: 0
-  },
-  {
-    question: "2️⃣ Sivashankar-ku romba pidicha food?",
-    options: ["Briyani", "Pizza", "Dosa", "Saranya kai-la irundha ellamey 😜"],
+    question: "Saranya-ku Sivashankar romba pidikkuma? 😍",
+    options: ["Ama ❤️", "Rompa Ama 😘", "Always 💕", "Ellamey ❤️"],
     answer: 3
   },
   {
-    question: "3️⃣ Saranya smile-na?",
-    options: ["Cute", "Dangerous", "Heart melt 😍", "Ellamey"],
+    question: "Namma love eppovum?",
+    options: ["1 day", "1 month", "Life long 💍", "Forever ♾️"],
     answer: 3
   },
   {
-    question: "4️⃣ Namma relationship strong-aa iruka reason?",
-    options: ["Love", "Trust", "Understanding", "Ellamey ❤️"],
+    question: "Saranya smile-na?",
+    options: ["Cute", "Heart melt", "Dangerous 😜", "Ellamey"],
     answer: 3
   },
   {
-    question: "5️⃣ Sivashankar sad-aa irundha?",
-    options: ["Advice", "Sleep", "Saranya hug 🤗", "Chocolate"],
+    question: "Sivashankar heart yaar kitta?",
+    options: ["Friends", "Family", "Saranya ❤️", "World"],
     answer: 2
+  },
+  {
+    question: "Last question 😌",
+    options: ["I like you", "I care you", "I need you", "I LOVE YOU ❤️"],
+    answer: 3
   }
 ];
 
 let current = 0;
 
 function loadQuestion() {
-  const q = quiz[current];
-  document.getElementById("question").innerText = q.question;
+  document.getElementById("question").innerText = quiz[current].question;
 
   for (let i = 0; i < 4; i++) {
-    document.getElementById("opt" + i).innerText = q.options[i];
+    document.getElementById("opt" + i).innerText =
+      quiz[current].options[i];
   }
 }
 
-function checkAnswer(index) {
+function checkAnswer() {
   current++;
   if (current < quiz.length) {
     loadQuestion();
   } else {
     document.getElementById("quiz-box").innerHTML =
-      "<h2>I LOVE YOU SARANYA ❤️</h2><p>Forever yours – Sivashankar</p>";
+      "<h2>I LOVE YOU SARANYA ❤️</h2><p>Forever – Sivashankar</p>";
   }
 }
 
 function playMusic() {
-  const music = document.getElementById("bgMusic");
+  let music = document.getElementById("bgMusic");
   music.play().catch(() => {
-    alert("Tap once more 🎵");
+    alert("Tap again 🎵");
   });
 }
 
-window.onload = loadQuestion;
+window.onload = loadQuestion; 
