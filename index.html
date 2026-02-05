@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Saranya ❤️ Sivashankar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <audio id="bgMusic" src="song.mp3"></audio>
+<!-- HEART RAIN -->
+<div class="hearts"></div>
 
-  <div class="container" id="quiz-box">
+<!-- INTRO PAGE -->
+<div id="intro" class="page active">
+  <img src="saranya.jpg" class="profile" alt="Saranya">
+  <h1>Saranya ❤️ Sivashankar</h1>
+  <p class="tease">
+    Indha quiz simple illa…  
+    idhu en heart-la irukura unmai 💖  
+  </p>
 
-    <h1 class="title">Saranya ❤️ Sivashankar</h1>
+  <button id="playBtn">🎵 Tap to Play Song</button>
+  <button id="startBtn" class="hidden">💘 Start Love Quiz</button>
+</div>
 
-    <button class="music-btn" onclick="playMusic()">🎵 Tap to Play Song</button>
+<!-- QUIZ PAGE -->
+<div id="quiz" class="page">
+  <h2 id="question"></h2>
+  <div id="options"></div>
+</div>
 
-    <div class="question-box">
-      <h2 id="question">Loading...</h2>
-    </div>
+<!-- RESULT PAGE -->
+<div id="result" class="page">
+  <h1>💖 Saranya 💖</h1>
+  <p>
+    Indha answers ellamey right / wrong illa…  
+    Aana en love unaku mattum dhaan 😘  
+  </p>
+  <h2>Forever Yours,<br>Sivashankar ❤️</h2>
+</div>
 
-    <div class="options">
-      <button class="option-btn" id="opt0" onclick="nextQuestion()"></button>
-      <button class="option-btn" id="opt1" onclick="nextQuestion()"></button>
-      <button class="option-btn" id="opt2" onclick="nextQuestion()"></button>
-      <button class="option-btn" id="opt3" onclick="nextQuestion()"></button>
-    </div>
+<audio id="song" src="song.mp3"></audio>
 
-  </div>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
