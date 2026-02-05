@@ -1,35 +1,31 @@
-02.03 4:55 PM
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Saranya ❤️ Sivashankar</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-  <h1 class="glow">Saranya  Sivashankar</h1>
-  <p class="subtitle">Just a small quiz… but full of love </p>
+  <h1 class="glow">Saranya ❤️ Sivashankar</h1>
 
-  <!-- Music -->
-  <audio id="bgMusic">
-  <source src="song.mp3" type="audio/mpeg">
-</audio>
+  <button class="music-btn" onclick="playMusic()">🎵 Tap to Play Song</button>
 
-  <!-- Quiz -->
   <div id="quiz-box">
-    <h2 id="question"></h2>
-    <div class="options">
-      <button onclick="checkAnswer(0)" id="opt0"></button>
-      <button onclick="checkAnswer(1)" id="opt1"></button>
-      <button onclick="checkAnswer(2)" id="opt2"></button>
-      <button onclick="checkAnswer(3)" id="opt3"></button>
-    </div>
+    <h2 id="question">Loading...</h2>
+
+    <button id="opt0" onclick="checkAnswer(0)"></button>
+    <button id="opt1" onclick="checkAnswer(1)"></button>
+    <button id="opt2" onclick="checkAnswer(2)"></button>
+    <button id="opt3" onclick="checkAnswer(3)"></button>
   </div>
 </div>
 
+<audio id="bgMusic" src="song.mp3"></audio>
+
+<!-- IMPORTANT: script LAST -->
 <script src="script.js"></script>
 </body>
 </html>
